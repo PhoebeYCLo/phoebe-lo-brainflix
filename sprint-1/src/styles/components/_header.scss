@@ -4,7 +4,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-between;
+        // justify-content: space-between;
         min-height: 80px;
 
         @include breakpoint ('table') {
@@ -24,6 +24,7 @@
     &__right {
         display: flex;
         flex-direction: column;
+        justify-content: flex-end;
         width: 100%;
 
         @include breakpoint ('table') {
@@ -72,6 +73,13 @@
 
     &__upload-btn{
         flex-grow: 1;
+
+        // &:before{
+        //     background-image: url(../../assets/icons/Icon-upload.svg) no-repeat;
+        //     float: left;
+        //     height: 40px;
+        //     width: 10px;
+        // }
     }
 
     &__user-avater-container{

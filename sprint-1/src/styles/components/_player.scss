@@ -1,0 +1,27 @@
+.player{
+    &__container{
+        height: 100%;
+        background-color: $black;
+        position: relative;
+    }
+
+    &__video-container{
+        position: relative;
+        margin: 0 auto;
+
+        @include breakpoint ('table'){
+            width: 700px;
+            height: 400px;
+        }
+
+        @include breakpoint ('desktop'){
+            width: 944px;
+            height: 540px;
+        }
+    }
+
+    &__video{
+        width: 100%;
+        height: 100%;
+    }
+}
