@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import VideoControl from './VideoControl';
 import axios from 'axios';
 
 class Player extends Component {
@@ -27,6 +28,7 @@ class Player extends Component {
                     src={this.state.video.video}>
                         <source type="video/mp4" />
                     </video>
+                    <VideoControl />
                 </div>
             </div>
         )
