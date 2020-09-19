@@ -1,13 +1,10 @@
 import React from 'react';
-import './App.scss';
+import Homelayout from './Homelayout.jsx';
+// import './App.scss';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>Brainflix</p>
-      </header>
-    </div>
+    <Homelayout />
   );
 }
 

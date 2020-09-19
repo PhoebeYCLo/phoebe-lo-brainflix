@@ -1,0 +1,86 @@
+.header {
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 80px;
+
+        @include breakpoint ('table') {
+            flex-direction: row;
+        }
+    }
+
+    &__left{
+        display: flex;
+        height: 48px;
+
+        @include breakpoint ('table') {
+            flex: 1;
+        }
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        @include breakpoint ('table') {
+            flex-direction: row;
+            width: 66.6%;
+        }
+
+        @include breakpoint ('desktop') {
+            width: 41.6%;
+        }
+
+        & > *:not(:last-child) {
+            margin-right: 16px;
+          }
+    }
+
+    &__user-menu {
+        display: flex;
+        margin-bottom: 1rem;
+
+        @include breakpoint ('table') {
+            margin-bottom: unset;
+        }
+
+        & > *:not(:last-child) {
+            margin-right: 16px;
+          }
+    }
+
+    // &__search-icon{
+    //     display: inline;
+    // }
+
+    &__search-input {
+        width: 100%;
+        height: 48px;
+        padding: 1rem;
+        margin-bottom: 8px;
+        border: 1px solid $mercury;
+        border-radius: $default-border-radius;
+        
+        @include breakpoint ('table'){
+            margin-bottom: unset;
+        }
+    }
+
+    &__upload-btn{
+        flex-grow: 1;
+    }
+
+    &__user-avater-container{
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background-image: url(../../assets/images/Mohan-muruge.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+}
