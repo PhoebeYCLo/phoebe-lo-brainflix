@@ -11,7 +11,7 @@ class Player extends Component {
     }
 
     componentDidMount() {
-        axios.get("./data.json")
+        axios.get(process.env.PUBLIC_URL + "./data.json")
         .then((res) => {
             this.setState({video: res.data.mainVideo})
         })
