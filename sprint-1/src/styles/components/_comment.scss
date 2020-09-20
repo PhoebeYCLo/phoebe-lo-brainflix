@@ -1,0 +1,10 @@
+.comments{
+    &__content{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__counter{
+        font-weight: 800;
+    }
+}
