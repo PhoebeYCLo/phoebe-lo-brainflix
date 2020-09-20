@@ -9,10 +9,11 @@
   
 body {
     font-family: 'Avenir Next', sans-serif;
+    color: $text-color;
 }
 
 p {
-    color: $text-color;
+    // color: $text-color;
     @include type ('p', 'phone');
 
     @include breakpoint ('table') {
