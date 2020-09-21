@@ -6,5 +6,123 @@
 
     &__counter{
         font-weight: 800;
+        margin-bottom: 2rem;
+    }
+}
+
+.comment{
+    display: flex;
+    padding-top: 1.5rem;
+    border-bottom: 1px solid $divider-color;
+
+    &__avater-img{
+        width: 54px;
+
+        & > img{
+            width: 42px;
+            height: 42px;
+            background-color: $silver;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    }
+
+    &__body{
+        flex: 1;
+    }
+
+    &__name{
+        font-weight: 800;
+        color: $text-color;
+        margin-right: 1rem;
+    }
+
+    &__date{
+        color: $text-color-light;
+    }
+
+    &__detail{
+        margin-bottom: 1rem;
+    }
+
+    &__head{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+
+        @include breakpoint ('table'){
+            justify-content: flex-start;
+        }
+    }
+
+    &__input{
+        display: flex;
+        margin-bottom: 1.5rem;
+
+        &-heading{
+            text-transform: uppercase;
+            color: $mercury;
+            margin-bottom: 0.5rem;
+        }
+
+        &-body{
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+        }
+    }
+
+    &__avatar{
+        width: 3.375rem;
+
+        & > img{
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    }
+
+    &__form{
+        display: flex;
+        flex-direction: column;
+
+        @include breakpoint ('table'){
+            flex-direction: row;
+            padding-right: 2.5rem;
+
+            & > *:not(:last-child){
+                margin-right: 1rem;
+            }
+        }
+
+        & > *{
+            width: 100%;
+        }
+
+        & textarea{
+            height: 6rem;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background-color: $alabaster;
+            border: 2px solid $mercury;
+            border-radius: $default-border-radius;
+            @include type ('p', 'phone');
+
+            @include breakpoint ('table'){
+                @include type ('p', 'table');
+            }
+
+            &:focus{
+                outline: none;
+                border: 2px solid $primary-color;
+            }
+        }
+    }
+
+    &__submit-btn{
+        @include breakpoint ('table'){
+            max-width: 10rem;
+        }
     }
 }
