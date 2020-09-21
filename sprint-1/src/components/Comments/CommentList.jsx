@@ -37,7 +37,7 @@ import axios from 'axios';
                     <Comment 
                         key={item.id}
                         name={item.name}
-                        data={this.timestampConvert(item.timestamp)}
+                        date={this.timestampConvert(item.timestamp)}
                         comment={item.comment}
                     />
                 )}

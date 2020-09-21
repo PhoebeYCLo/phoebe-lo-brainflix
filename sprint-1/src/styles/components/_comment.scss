@@ -5,7 +5,7 @@
     }
 
     &__counter{
-        font-weight: 800;
+        font-weight: 600;
         margin-bottom: 2rem;
     }
 }
@@ -110,6 +110,8 @@
             @include type ('p', 'phone');
 
             @include breakpoint ('table'){
+                height: 3rem;
+                padding: 0.6rem 1rem;
                 @include type ('p', 'table');
             }
 
@@ -124,5 +126,9 @@
         @include breakpoint ('table'){
             max-width: 10rem;
         }
+    }
+
+    &__list{
+        margin-bottom: 2.5rem;
     }
 }

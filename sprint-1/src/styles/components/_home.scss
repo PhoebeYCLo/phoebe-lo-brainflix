@@ -1,0 +1,24 @@
+.home{
+    &__content{
+        display: flex;
+        flex-direction: column;
+
+        @include breakpoint ('desktop'){
+            flex-direction: row;
+        }
+    }
+
+    &__main{
+        @include breakpoint ('desktop'){
+            width: 75%;
+            margin-right: 1.5rem;
+        }
+    }
+
+    &__minor{
+        @include breakpoint ('desktop'){
+            width: 25%;
+            padding-top: 2.5rem;
+        }
+    }
+}
