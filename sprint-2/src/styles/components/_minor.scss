@@ -1,0 +1,12 @@
+.minor{
+    &__title{
+        margin-bottom: 2.5rem;
+        text-transform: uppercase;
+        color: $text-color-light;
+        @include type ('h5', 'phone');
+        
+        @include breakpoint ('tablet'){
+            @include type ('h5', 'table');
+        }
+    }
+}

@@ -1,0 +1,19 @@
+// helper
+@import './styles/helper/variables';
+@import './styles/helper/mixins';
+
+// partials
+@import './styles/partials/typography';
+@import './styles/partials/global';
+
+// components
+@import './styles/components/header';
+@import './styles/components/container';
+@import './styles/components/btn';
+@import './styles/components/player';
+@import './styles/components/divider';
+@import './styles/components/info';
+@import './styles/components/comment';
+@import './styles/components/videoclips';
+@import './styles/components/minor';
+@import './styles/components/home';

@@ -1,0 +1,74 @@
+.player{
+    &__container{
+        height: 100%;
+        background-color: $black;
+        position: relative;
+    }
+
+    &__video{
+        width: 100%;
+        height: 100%;
+        
+        &-container{
+            position: relative;
+            margin: 0 auto;
+    
+            @include breakpoint ('table'){
+                width: 700px;
+                height: 400px;
+            }
+    
+            @include breakpoint ('desktop'){
+                width: 944px;
+                height: 540px;
+            }
+        }
+    }
+
+    &__buttons-container{
+        display: flex;
+        margin: 0 0.5rem;
+        position: absolute;
+        height: 32px;
+        bottom: 15px;
+        left: 0;
+        right: 0;
+
+        @include breakpoint('desktop'){
+            margin: 0 1rem;
+        }
+
+        & > * {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            color: $white;
+            padding: 1rem;
+            background-color: rgba($color: #000000, $alpha: 0.5);
+            border-radius: $default-border-radius;
+
+            & *:not(:last-child) {
+                margin-right: 1rem;
+            }
+        }
+    }
+
+    &__button-time{
+        flex-grow: 1;
+        margin: 0 0.5rem;
+
+        &--line{
+            width:100%; 
+            border: 1px solid $black;
+        }
+
+        &--display{
+            display: none;
+            font-size: 0.75rem;
+
+            @include breakpoint ('table'){
+                display: initial;
+            }
+        }
+    }
+}
