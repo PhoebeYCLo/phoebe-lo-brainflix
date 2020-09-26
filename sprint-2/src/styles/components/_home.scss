@@ -10,14 +10,14 @@
 
     &__main{
         @include breakpoint ('desktop'){
-            width: 75%;
+            width: 66.6%;
             margin-right: 1.5rem;
         }
     }
 
     &__minor{
         @include breakpoint ('desktop'){
-            width: 25%;
+            width: 33.3%;
             padding-top: 2.5rem;
         }
     }
