@@ -15,6 +15,7 @@
     &__left{
         display: flex;
         height: 48px;
+        align-items: center;
 
         @include breakpoint ('table') {
             flex: 1;
@@ -45,26 +46,47 @@
         display: flex;
         margin-bottom: 1rem;
 
+        & > a {
+            width: 100%;
+        }
+
         @include breakpoint ('table') {
             margin-bottom: unset;
+
+            & > a {
+                width: initial;
+            }
         }
 
         & > *:not(:last-child) {
             margin-right: 16px;
-          }
+        }
     }
 
-    // &__search-icon{
-    //     display: inline;
-    // }
+    &__search-container{
+        display: flex;
+        align-items: center;
+        border: 1px solid $mercury;
+        border-radius: $default-border-radius;
+        margin-bottom: 8px;
+        
+        @include breakpoint ('desktop'){
+            max-width: 252px;
+        }
+    }
 
     &__search-input {
         width: 100%;
         height: 48px;
         padding: 1rem;
         margin-bottom: 8px;
-        border: 1px solid $mercury;
-        border-radius: $default-border-radius;
+        background: transparent;
+        border: none;
+
+        &:focus{
+            outline: none;
+        }
+        
         
         @include breakpoint ('table'){
             margin-bottom: unset;
@@ -73,13 +95,13 @@
 
     &__upload-btn{
         flex-grow: 1;
+        width: 100%;
+        display: flex;
+        justify-content: center;
 
-        // &:before{
-        //     background-image: url(../../assets/icons/Icon-upload.svg) no-repeat;
-        //     float: left;
-        //     height: 40px;
-        //     width: 10px;
-        // }
+        & > svg{
+            margin-right: 1rem;
+        }
     }
 
     &__user-avater-container{

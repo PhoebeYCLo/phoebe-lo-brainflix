@@ -36,8 +36,8 @@
 
         &-label{
             display: block;
-        text-transform: uppercase;
-        color: $text-color-light;
+            text-transform: uppercase;
+            color: $text-color-light;
         @include type ('h5', 'phone', 600);
         }
 
