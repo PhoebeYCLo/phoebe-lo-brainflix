@@ -6,7 +6,8 @@ import VideoClips from '../VideoClips/VideoClips';
         <section className="minor">
             <div className="minor__title">Next Video</div>
             {/* <VideoClips data={props.data}/> */}
-            <VideoClips videoList={props.videoList}/>
+            <VideoClips videoList={props.videoList}
+                        mainVideoId={props.mainVideoId} />
         </section>
     )
 }
