@@ -47,6 +47,10 @@
         &-right{
             margin-bottom: 1.5rem;
 
+            @include breakpoint ('desktop'){
+                padding-right: 2rem;
+            }
+
             & > * {
                 display: inline;
 

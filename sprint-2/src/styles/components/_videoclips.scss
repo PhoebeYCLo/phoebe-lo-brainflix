@@ -1,4 +1,10 @@
 .clips {
+    &__list{
+        & > a{
+            color: $text-color;
+        }
+    }
+
     &__container{
         margin-bottom: 1.5rem;
 
@@ -13,8 +19,12 @@
 
     &__card{
         display: flex;
+        width: 100%;
 
         &-image-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 120px;
             height: 70px;
             margin-right: 1rem;
@@ -28,11 +38,13 @@
             }
         }
 
+        &-detail{
+            width: calc(100% - 136px);
+        }
+
         &-title{
             font-weight: 600;
             margin-bottom: 1rem;
         }
-
-
     }
 }

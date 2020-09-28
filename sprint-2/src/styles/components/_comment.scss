@@ -43,6 +43,10 @@
 
     &__detail{
         margin-bottom: 1rem;
+
+        @include breakpoint ('desktop'){
+            padding-right: 2rem;
+        }
     }
 
     &__head{

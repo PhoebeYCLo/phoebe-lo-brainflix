@@ -4,7 +4,7 @@ import Comments from '../Comments/Comments';
 
 const Main = (props) => {
     return (
-        <div>
+        <div className="home__main-content">
             {/* <Info data={props.data}/> */}
             {/* <Info title={props.title}
                   channel={props.channel}
