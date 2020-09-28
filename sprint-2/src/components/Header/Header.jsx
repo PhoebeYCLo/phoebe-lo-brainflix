@@ -19,7 +19,6 @@ const Header = () => {
                     <div className="header__user-menu">
                         <Link to="/upload">
                             <UploadButton />
-                            {/* <button className="header__upload-btn btn">Upload</button> */}
                         </Link>
                         <div className="header__user-avater-container"></div>
                     </div>

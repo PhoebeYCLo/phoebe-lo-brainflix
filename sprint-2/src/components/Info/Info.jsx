@@ -1,8 +1,6 @@
-import React, { Component } from 'react';
-import { withRouter } from "react-router-dom";
+import React from 'react';
 import IconViews from './IconViews';
 import IconLikes from './IconLikes';
-import axios from 'axios';
 
 
 const timestampConvert = (timestamp) => {
@@ -18,17 +16,6 @@ const timestampConvert = (timestamp) => {
 };
 
 const Info = (props) => {
-    // state ={
-    //     mainVideo: []
-    // }
-
-    // componentDidMount() {
-    //     axios.get(process.env.PUBLIC_URL + "./data.json")
-    //     .then((res) => {
-    //         this.setState({mainVideo: res.data.mainVideo})
-    //     })
-    //     .catch(err => console.log(err));
-    // }
 
     return (
         <div className="info__content">
