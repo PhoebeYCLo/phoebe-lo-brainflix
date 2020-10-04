@@ -6,8 +6,10 @@ import Player from '../Player/Player';
 import Main from '../Home/Main';
 import Minor from '../Home/Minor';
 
-const apiURL = 'https://project-2-api.herokuapp.com';
-const apiKEY = 'd9d69a08-141e-4487-b71c-d9a72fe56b89';
+// const apiURL = 'https://project-2-api.herokuapp.com';
+// const apiKEY = 'd9d69a08-141e-4487-b71c-d9a72fe56b89';
+
+const URL = "http://localhost:8080";
 
 class VideoPage extends Component {
     constructor(props){
@@ -19,7 +21,7 @@ class VideoPage extends Component {
     }
 
     getMainVideo(videoId) {
-            axios.get(`${apiURL}/videos/${videoId}?api_key=${apiKEY}`)
+            axios.get(`${URL}/videos/${videoId}`)
             .then(res => 
                 // console.log(res))
                 this.setState({ mainVideo: res.data }))
@@ -27,7 +29,7 @@ class VideoPage extends Component {
     }
 
     getSideVideo() {
-        axios.get(`${apiURL}/videos?api_key=${apiKEY}`)
+        axios.get(`${URL}/videos`)
             .then(res => 
                 // console.log(res))
                 this.setState({ sideVideos: res.data }))
@@ -52,7 +54,7 @@ class VideoPage extends Component {
         return(
             <div className="home">
                 <Player 
-                    src={this.state.mainVideo.video + apiKEY}
+                    src={this.state.mainVideo.video}
                     image={this.state.mainVideo.image}
                 />
                 <main className="home__content container">
