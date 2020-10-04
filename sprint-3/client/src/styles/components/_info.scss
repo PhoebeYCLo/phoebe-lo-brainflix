@@ -1,0 +1,87 @@
+.info {
+    &__content {
+        padding: 2rem 0 2.5rem 0;
+
+        @include breakpoint ('table') {
+            padding-top: 3rem;
+            padding-bottom: 4rem;
+        }
+
+        @include breakpoint ('desktop') {
+            padding-top: 2.5rem;
+        }
+    }
+
+    &__title {
+        @include type ('h1', 'phone', 800);
+        margin-bottom: 1rem;
+
+        @include breakpoint ('table') {
+            @include type ('h1', 'table');
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &__detail {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include breakpoint ('table') {
+            flex-direction: row;
+        }
+
+        &-left {
+            margin-bottom: 2rem;
+
+            @include breakpoint ('table') {
+                margin-bottom: 1.5rem;
+            }
+
+            & > * {
+                display: inline;
+                margin-right: 0.5rem;
+            }
+        }
+
+        &-right{
+            margin-bottom: 1.5rem;
+
+            @include breakpoint ('desktop'){
+                padding-right: 2rem;
+            }
+
+            & > * {
+                display: inline;
+
+                & > svg {
+                    margin-right: 0.5rem;
+                }
+
+                &:not(:last-child) {
+                    margin-right: 24px;
+                }
+            }
+            
+        }
+    }
+
+    &__channel{
+        @include type ('h2', 'phone', 600);
+    }
+
+    &__date{
+        color: $text-color-light;
+    }
+
+    &__description{
+        @include type ('p', 'phone');
+        margin: 1.5rem 0 2.5rem 0;
+
+        @include breakpoint ('table') {
+            @include type ('p', 'table');
+            margin: 2.5rem 0 4rem 0;
+            max-width: 75%;
+        }
+    }
+}

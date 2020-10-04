@@ -1,0 +1,116 @@
+.header {
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // justify-content: space-between;
+        min-height: 80px;
+
+        @include breakpoint ('table') {
+            flex-direction: row;
+        }
+    }
+
+    &__left{
+        display: flex;
+        height: 48px;
+        align-items: center;
+
+        @include breakpoint ('table') {
+            flex: 1;
+        }
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        width: 100%;
+
+        @include breakpoint ('table') {
+            flex-direction: row;
+            width: 66.6%;
+        }
+
+        @include breakpoint ('desktop') {
+            width: 41.6%;
+        }
+
+        & > *:not(:last-child) {
+            margin-right: 16px;
+          }
+    }
+
+    &__user-menu {
+        display: flex;
+        margin-bottom: 1rem;
+
+        & > a {
+            width: 100%;
+        }
+
+        @include breakpoint ('table') {
+            margin-bottom: unset;
+
+            & > a {
+                width: initial;
+            }
+        }
+
+        & > *:not(:last-child) {
+            margin-right: 16px;
+        }
+    }
+
+    &__search-container{
+        display: flex;
+        align-items: center;
+        border: 1px solid $mercury;
+        border-radius: $default-border-radius;
+        margin-bottom: 8px;
+        
+        @include breakpoint ('desktop'){
+            max-width: 252px;
+        }
+    }
+
+    &__search-input {
+        width: 100%;
+        height: 48px;
+        padding: 1rem;
+        margin-bottom: 8px;
+        background: transparent;
+        border: none;
+
+        &:focus{
+            outline: none;
+        }
+        
+        
+        @include breakpoint ('table'){
+            margin-bottom: unset;
+        }
+    }
+
+    &__upload-btn{
+        flex-grow: 1;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        & > svg{
+            margin-right: 1rem;
+        }
+    }
+
+    &__user-avater-container{
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background-image: url(../../assets/images/Mohan-muruge.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+}

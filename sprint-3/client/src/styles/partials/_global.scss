@@ -1,0 +1,59 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+  
+body {
+    font-family: 'Avenir Next', sans-serif;
+    color: $text-color;
+}
+
+p {
+    // color: $text-color;
+    @include type ('p', 'phone');
+
+    @include breakpoint ('table') {
+        @include type ('p', 'table');
+    }
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.input{
+    padding: 0 1rem;
+    height: 3rem;
+}
+
+.textarea{
+    height: 5.875rem;
+    padding: 1rem;
+}
+
+.input,
+.textarea{
+    width: 100%;
+    background-color: $alabaster;
+    border: 1px solid $secondary-color;
+    border-radius: $default-border-radius;
+    @include type ('p', 'phone');
+
+    @include breakpoint ('table'){
+        @include type ('p', 'table');
+    }
+
+    &:focus{
+        outline: none;
+        border: 2px solid $primary-color;
+    }
+}

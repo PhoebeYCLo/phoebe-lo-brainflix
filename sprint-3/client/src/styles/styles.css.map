@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA,UAAU;EACN,WAAW,EAAE,aAAa;EAC1B,GAAG,EAAE,2CAA2C,CAAC,kBAAkB;EACnE,UAAU,EAAE,MAAM;EAClB,WAAW,EAAE,MAAM;;;AAGvB,UAAU;EACN,WAAW,EAAE,aAAa;EAC1B,GAAG,EAAE,wCAAwC,CAAC,kBAAkB;EAChE,UAAU,EAAE,MAAM;EAClB,WAAW,EAAE,GAAG;;;AAGpB,UAAU;EACN,WAAW,EAAE,aAAa;EAC1B,GAAG,EAAE,wCAAwC,CAAC,kBAAkB;EAChE,UAAU,EAAE,MAAM;EAClB,WAAW,EAAE,GAAG",
+    "sources": [
+        "styles.scss",
+        "partials/_typography.scss"
+    ],
+    "names": [],
+    "file": "styles.css"
+}

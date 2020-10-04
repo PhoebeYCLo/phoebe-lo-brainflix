@@ -1,0 +1,25 @@
+// colors
+$black: #000000;
+$black-light: #323232;
+$silver: #AFAFAF;
+$mercury: #E1E1E1;
+$alabaster: #FAFAFA;
+$white: #FFFFFF;
+$instock-blue: #004892;
+$instock-blue-dark: #002F5F;
+$brainflix-blue: #0095FF;
+$brainflix-blue-dark: #0065AD;
+
+$primary-color: $brainflix-blue;
+$primary-color-hover: $brainflix-blue-dark;
+$secondary-color: $silver;
+$divider-color: $mercury;
+
+$text-color: $black-light;
+$text-color-light: $silver;
+
+// font
+$font-size-base: 16px;
+
+// button & form border
+$default-border-radius: 4px;

@@ -1,0 +1,120 @@
+.upload{
+    padding-top: 1.5rem;
+
+    @include breakpoint ('table'){
+        padding-top: 3rem;
+    }
+
+    &__heading{
+        @include type('h1', 'phone', 800);
+        margin-bottom: 2rem;
+        
+        @include breakpoint ('table'){
+            @include type('h1', 'table');
+        }
+    }
+
+    &__divider{
+        display: none;
+        margin-bottom: 2.5rem;
+
+        @include breakpoint ('table'){
+            display: block;
+        }
+    }
+
+    &__main-content{
+        display: flex;
+        flex-direction: column;
+
+        @include breakpoint ('desktop'){
+            flex-direction: row;
+        }
+    }
+
+    &__video{
+
+        &-label{
+            display: block;
+            text-transform: uppercase;
+            color: $text-color-light;
+        @include type ('h5', 'phone', 600);
+        }
+
+        &-preview{
+            @include breakpoint ('table'){
+                width: 50%;
+            }
+
+            @include breakpoint ('desktop'){
+                width: 33.3%;
+            }
+        }
+
+        &-thumbnail{
+            margin-bottom: 2rem;
+
+            @include breakpoint ('table'){
+                margin-bottom: 2.5rem;
+                max-width: 344px;
+                max-height: 183px;
+            }
+
+            & > img {
+                object-fit: cover;
+                border-radius: $default-border-radius;
+            }
+        }
+    }
+
+    &__form{
+        @include breakpoint ('desktop'){
+            flex-grow: 1;
+        }
+
+        &-input{
+            margin-bottom: 1.5rem;
+        }
+
+        &-textarea{
+            margin-bottom: 2rem;
+
+            @include breakpoint ('table'){
+                margin-bottom: 2.5rem;
+            }
+        }
+
+        &-control{
+            display: flex;
+            flex-direction: column;
+
+            @include breakpoint ('table') {
+                flex-direction: row-reverse;
+            }
+        }
+    }
+
+    &__submit-btn{
+        width: 100%;
+        margin-bottom: 1.5rem;
+        font-weight: 600;
+
+        @include breakpoint ('table'){
+            max-width: 10rem;
+        }
+    }
+
+    &__cancel-btn{
+        background-color: initial;
+        color: $brainflix-blue;
+        font-weight: 600;
+
+        &:hover{
+            background-color: initial;
+        }
+
+        @include breakpoint ('table'){
+            margin-right: 3rem;
+        }
+    }
+}

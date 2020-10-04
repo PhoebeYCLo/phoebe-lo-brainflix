@@ -1,0 +1,91 @@
+// responsive breakpoints
+@mixin breakpoint($class) {
+    @if $class == 'phone' {
+        @media only screen and (max-width: 767px){
+            @content;
+        }
+    } 
+
+    @else if $class == 'table' {
+        @media only screen and (min-width: 768px){
+            @content;
+        }
+    }
+
+    @else if $class == 'desktop'{
+        @media screen and (min-width: 1200px){
+            @content;
+        }
+    }
+
+    @else{
+        @warn "Breakpoint mixin supports: phone, table, desktop";
+    }
+}
+
+// typography
+@mixin type ($tag, $breakpoint, $weight: null) {
+    // h1
+    @if $tag == 'h1'{
+        @if $breakpoint == 'phone' {
+            font-size: 24px;
+            line-height: 32px;
+        }
+        @else if $breakpoint == 'table'{
+            font-size: 36px;
+            line-height: 44px;
+        }
+    }
+
+    // h2
+    @if $tag == 'h2'{
+        @if $breakpoint == 'phone' {
+            font-size: 16px;
+            line-height: 24px;
+        }
+        @else if $breakpoint == 'table'{
+            font-size: 24px;
+            line-height: 32px;
+        }
+    }
+
+    // h3
+    @if $tag == 'h3' {
+        @if $breakpoint == 'phone' {
+            font-size: 14px;
+            line-height: 22px;
+        }
+        @else if $breakpoint == 'table'{
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+    // h4 - paragraph
+    @if $tag == 'p' {
+        @if $breakpoint == 'phone' {
+            font-size: 13px;
+            line-height: 18px;
+        }
+        @else if $breakpoint == 'table'{
+            font-size: 14px;
+            line-height: 22px;
+        }
+    }
+
+    // h5
+    @if $tag == 'h5' {
+        @if $breakpoint == 'phone' {
+            font-size: 12px;
+            line-height: 20px;
+        }
+        @else if $breakpoint == 'table'{
+            font-size: 13px;
+            line-height: 20px;
+        }
+    }
+
+    @if $weight != null {
+        font-weight: $weight;
+    }
+}
