@@ -3,6 +3,7 @@ import React, { Component } from 'react'
  class IconVolume extends Component {
     render() {
         return (
+            <>
             <svg width="17px" height="16px" viewBox="0 0 17 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/1999/xlink">
                 <g id="BrainFlix" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                     <g id="Icon-volume" fill="#FFFFFF" fill-rule="nonzero">
@@ -10,6 +11,7 @@ import React, { Component } from 'react'
                     </g>
                 </g>
             </svg>
+            </>
         )
     }
 }

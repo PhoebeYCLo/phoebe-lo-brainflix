@@ -4,12 +4,12 @@ const router = express.Router();
 const videos = require('../data.json');
 
 // Get all video
-router.get("/", (req, res) => {
+router.get("/videos", (req, res) => {
     res.json(videos);
 });
 
 // Get video by id
-router.get("/:id", (req, res) => {
+router.get("/videos/:id", (req, res) => {
     const findVideo = videos.some((video) => video.id === req.params.id);
 
     if (findVideo) {
@@ -18,7 +18,7 @@ router.get("/:id", (req, res) => {
 });
 
 // Post video
-router.post("/", (req, res) => {
+router.post("/videos", (req, res) => {
     const newVideo = {
         id: uuid.v4(),
         title: req.body.title,

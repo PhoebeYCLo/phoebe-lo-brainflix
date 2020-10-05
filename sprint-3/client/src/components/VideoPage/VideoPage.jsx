@@ -6,9 +6,6 @@ import Player from '../Player/Player';
 import Main from '../Home/Main';
 import Minor from '../Home/Minor';
 
-// const apiURL = 'https://project-2-api.herokuapp.com';
-// const apiKEY = 'd9d69a08-141e-4487-b71c-d9a72fe56b89';
-
 const URL = "http://localhost:8080";
 
 class VideoPage extends Component {
@@ -21,17 +18,15 @@ class VideoPage extends Component {
     }
 
     getMainVideo(videoId) {
-            axios.get(`${URL}/videos/${videoId}`)
-            .then(res => 
-                // console.log(res))
-                this.setState({ mainVideo: res.data }))
-            .catch(err => console.log(err));
+        axios.get(`${URL}/videos/${videoId}`)
+        .then(res => 
+            this.setState({ mainVideo: res.data }))
+        .catch(err => console.log(err));
     }
 
     getSideVideo() {
         axios.get(`${URL}/videos`)
             .then(res => 
-                // console.log(res))
                 this.setState({ sideVideos: res.data }))
             .catch(err => console.log(err));
     }

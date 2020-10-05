@@ -4,11 +4,26 @@ import axios from 'axios';
 const URL = "http://localhost:8080";
 
 class Upload extends Component {
+    constructor(props) {
+        super();
+        this.state = {
+            submitted: false,
+            errors: false
+        }
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
 
     handleSubmit = (e) =>{
         e.preventDefault();
+
         const videoTitle = e.target.videoTitle.value;
         const videoDescription = e.target.videoDescription.value;
+
+        if(!videoTitle || !videoDescription){
+            this.setState({ errors: true });
+            return;
+        };
+
 
         axios.post(`${URL}/videos`, {
             title: videoTitle,
@@ -19,9 +34,24 @@ class Upload extends Component {
         });
 
         e.target.reset();
+        this.setState({ submitted: true });
     }
 
     render() {
+        let errorMessage;
+        if (this.state.errors) {
+            errorMessage = <div className="upload__error-message">All fields are required</div>
+        } else {
+            errorMessage = null;
+        };
+
+        let successMessage;
+        if (this.state.submitted) {
+            successMessage = <div className="upload__success-message">Video Uploaded</div>
+        } else {
+            successMessage = null;
+        };
+
         return (
             <div className="upload">
                 <main className="upload__content container">
@@ -53,6 +83,8 @@ class Upload extends Component {
                                 <button className="upload__submit-btn btn">Publish</button>
                                 <button className="upload__cancel-btn btn">Cancel</button>
                             </div>
+                            <div>{ errorMessage }</div>
+                            <div>{ successMessage }</div>
                         </form>
                     </div>
                 </main>

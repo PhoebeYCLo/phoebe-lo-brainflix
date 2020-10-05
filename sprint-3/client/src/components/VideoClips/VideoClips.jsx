@@ -1,10 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import ClipsCard from './ClipsCard';
 
 const VideoClips = (props) =>{
-    
-    console.log("Main video id - " + props.mainVideoId);
 
     const filterMain = (item) =>{
         return item.id !== props.mainVideoId;
